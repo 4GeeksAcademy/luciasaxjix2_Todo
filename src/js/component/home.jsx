@@ -24,9 +24,9 @@ const Home = () => {
 
 	return (
 		<>
-			<div className="paper">
+			<div className="container text-center mt-5 caja ">
 				<div className="container text-center mt-5 display-5 todos">ToDos</div>
-				<div className=" mt-5 text-center shadow p-3 mb-5 bg-body rounded ">
+				<div className="paper">
 					<input className="container border-top-0 border-light" placeholder="Agregar Tarea"
 						onKeyUp={
 							(e) => { handleInput(e) }
@@ -39,12 +39,12 @@ const Home = () => {
 										lista.map((item, index) => {
 											return <li className="list-group-item border" key={index}>
 												{item}
-												<button type="button" className="btn btn-outline-light boton text-danger"onClick={e => { deleteTask(index) }}><i class="fa-solid fa-trash-can"></i>
+												<button type="button" className="btn btn-outline-light boton text-danger"onClick={e => { deleteTask(index) }}><i class="fa-solid fa-x"></i>
 												</button>
 											</li>
 										})
 									}</>
-									: "Agregar tarea"
+									: "Agregar tarea"	
 							}
 						</ul>
 					</div>
